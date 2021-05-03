@@ -57,3 +57,28 @@ std::vector<long long> pascalsTriangle(int n)
     }
     return output;
 }
+
+/* Better Solution */
+
+#include <vector>
+
+using namespace std;
+
+std::vector<long long> pascalsTriangle(int n)
+{
+  //your code here
+  
+  vector<long long> res;
+  for(int i=0;i<n;i++)
+  { 
+    long long num =1;
+    for(int j=0;j<i+1;j++)
+    {
+      res.push_back(num);
+      
+      num = (num*(i-j))/(j+1);
+    }
+  }
+  return res;
+  
+}
