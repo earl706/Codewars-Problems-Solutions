@@ -1,5 +1,4 @@
 /* 
-version: Clang 8 c++17
 
 6 Kyu 
 
